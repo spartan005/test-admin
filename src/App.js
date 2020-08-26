@@ -1,6 +1,6 @@
 import React from "react";
 import { Admin, Resource } from "react-admin";
-//import jsonServerProvider from "ra-data-json-server";
+import jsonServerProvider from "ra-data-json-server";
 import { PostList, PostEdit, PostCreate } from "./posts";
 import { UserList } from "./users";
 import PostIcon from "@material-ui/icons/Book";
@@ -8,9 +8,8 @@ import UserIcon from "@material-ui/icons/Group";
 import "./App.css";
 import Dashboard from "./Dashboard";
 import authProvider from "./authProvider";
-import dataProvider from "./dataProvider";
 
-//const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
+const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
 const App = () => (
   <Admin
     dashboard={Dashboard}
